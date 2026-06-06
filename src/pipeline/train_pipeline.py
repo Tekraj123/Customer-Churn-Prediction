@@ -16,11 +16,11 @@ class model_pipeline:
             logging.info("trian_pipeline")
             train_arr,test_arr = transformation.initiate_data_transformation(train,test)  
 
-            modelTrain = modelTrainer()
-            model_path = modelTrain.initiate_model_trainer(train_arr,test_arr)      
+            # modelTrain = modelTrainer()
+            # model_path = modelTrain.initiate_model_trainer(train_arr,test_arr)      
 
             model_eval= modelEvaluate()
-            accuracy,precision,f1,recall= model_eval.initiate_model_evaluate(train_arr,test_arr,model_path) 
+            accuracy,precision,f1,recall= model_eval.initiate_model_evaluate(train_arr,test_arr,_) 
 
             
 

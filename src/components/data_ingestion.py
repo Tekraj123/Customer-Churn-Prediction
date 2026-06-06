@@ -1,11 +1,13 @@
-import os 
-import sys
-import pandas as pd
-import numpy as np
+import os  
+import sys 
+import pandas as pd 
+import numpy as np 
 
-from src.logger import logging
-from src.exception import CustomException
-from dataclasses import dataclass
+
+
+from src.logger import logging 
+from src.exception import CustomException 
+from dataclasses import dataclass 
 from sklearn.model_selection import train_test_split
 
 
@@ -37,6 +39,8 @@ class DataIngestion():
             
             logging.info("Dataset read as pandas dataframe")
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
+
+
             df=df.iloc[:,1:]
             df.to_csv(self.ingestion_config.raw_data_path,index=False,header=True)
             logging.info("Train test split initiated")

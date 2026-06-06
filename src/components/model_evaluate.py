@@ -32,9 +32,13 @@ class modelEvaluate():
         precision= precision_score(y_test,pred_value)
         f1= f1_score(y_test,pred_value)
         recall= recall_score(y_test,pred_value)
-        logging.info(f"accuacy={accuracy}\nprecision={precision}\nf1={f1}\nrecall={recall}")
+        logging.info(f"THE BEST MODEL IS    {model}   accuacy={accuracy}\nprecision={precision}\nf1={f1}\nrecall={recall}"   )   
+
+
 
         logging.info ("all done ")
+
+
 
         return (
             accuracy,
@@ -43,7 +47,8 @@ class modelEvaluate():
             recall,
         )
 
-
+if __name__ == "__main__":
+    logging.info("Logging has started") 
 
 
 

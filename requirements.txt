@@ -9,6 +9,12 @@ xgboost
 catboost
 -e .
 
+
+
+
+
+
+
 # conda init
 # conda create -p ./venv python=3.13.9 -y
 # conda activate ./venv
@@ -18,4 +24,11 @@ catboost
 
 
 
-#  python -m src.components.data_ingestion        to runa any program in src folder
+#  python -m src.components.data_ingestion        to runa any program in src folder     
+
+
+
+
+
+
+

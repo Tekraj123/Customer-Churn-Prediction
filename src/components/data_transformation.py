@@ -91,9 +91,13 @@ class DataTransformation():
 
             logging.info("Data transformation completed successfully")
 
+
+
+
+
             save_objects(
                 obj=processor,
-                file_path=self.processor_path.processor_file_path
+                file_path=self.processor_path.processor_file_path 
             )
 
             logging.info("Processor object saved successfully")
@@ -104,7 +108,7 @@ class DataTransformation():
 
 
 
-            train_arr=np.c_[processed_train_data,np.array(train_target)]
+            train_arr=np.c_[processed_train_data,np.array(train_target)]   ##  np.c_ is a function in NumPy that concatenates arrays along the second axis (columns). In this case, it combines the processed_train_data (which contains the transformed features) with the train_target (which contains the target variable) to create a new array called train_arr. The resulting train_arr will have all the transformed features along with the corresponding target values in a single array.
             test_arr=np.c_[processed_test_data,np.array(test_target)]
 
 
